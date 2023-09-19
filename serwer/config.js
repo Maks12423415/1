@@ -38,7 +38,7 @@ app.get("/add/:imie/:nazwisko/:ocena", (req, res) => {
   var nazwisko = req.params.nazwisko;
 var ocena = parseInt(req.params.ocena)
   
-  const sql = `INSERT INTO uczniowie ('imie', 'nazwisko', 'ocena') VALUES ('${imie}','${nazwisko}','${ocena}')`;
+  const sql = `INSERT INTO uczniowie (imie, nazwisko, ocena) VALUES ('${imie}','${nazwisko}','${ocena}')`;
   conn.query(sql, (err, results, fields) => {
     console.log(results);
     
